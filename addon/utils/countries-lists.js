@@ -1,4 +1,7 @@
-export const countries = [
+import Ember from 'ember';
+
+
+export const countries = Ember.A([
   {country: 'Afghanistan'                                 , iso: 'AF'},
   {country: 'Åland Islands'                               , iso: 'AX'},
   {country: 'Albania'                                     , iso: 'AL'},
@@ -248,10 +251,10 @@ export const countries = [
   {country: 'Yemen'                                       , iso: 'YE'},
   {country: 'Zambia'                                      , iso: 'ZM'},
   {country: 'Zimbabwe'                                    , iso: 'ZW'}
-];
+]);
 
 
-export const countriesWithoutZip = [
+export const countriesWithoutZip = Ember.A([
   'AG', 'AW', 'BS', 'BZ', 'BJ', 'BQ',
   'BW', 'BF', 'BI', 'CF', 'KM', 'CG',
   'CD', 'CK', 'CI', 'CW', 'DJ', 'DM',
@@ -262,7 +265,7 @@ export const countriesWithoutZip = [
   'ST', 'SC', 'SX', 'SL', 'SB', 'SO',
   'SR', 'SY', 'TZ', 'TG', 'TK', 'TO',
   'TV', 'UG', 'AE', 'VU', 'YE', 'ZW'
-];
+]);
 
 
-export const countriesWithState = ["US", "CA"];
+export const countriesWithState = Ember.A(["US", "CA"]);

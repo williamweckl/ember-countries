@@ -5,7 +5,7 @@ A simple addon that contains the 3 following lists:
  - the countries without ZIP Code.
  - the countries with states.
 
-Three helpers are also available: 
+Three helpers are also available:
  - Country ISO to name.
  - Is country with state.
  - Is country without ZIP Code.
@@ -23,7 +23,7 @@ Three helpers are also available:
 import {countries, countriesWithoutZip, countriesWithState} from 'ember-countries';
 import {countryIsoToValue, isCountryWithState, isCountryWithoutZip} from 'ember-countries';
 
-// Simply use the lists 
+// How to use lists
 export default Ember.Controller.extend({
   ...
   countriesList: countries,
@@ -46,3 +46,7 @@ countryIsoToValue('FR'); // -> 'France'
 * `ember build`
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+
+##Contributing
+
+PRs welcome!
