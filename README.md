@@ -6,7 +6,7 @@ A simple addon that contains the 3 following lists:
  - the countries with states.
 
 Three helpers are also available: 
- - Country ISO to name (f('US') -> 'United State').
+ - Country ISO to name.
  - Is country with state.
  - Is country without ZIP Code.
 
