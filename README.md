@@ -1,4 +1,6 @@
 # Ember-countries
+[![npm version](https://badge.fury.io/js/ember-countries.svg)](https://badge.fury.io/js/ember-countries)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-countries.svg)](http://emberobserver.com/addons/ember-countries)
 
 A simple addon that contains the 3 following lists:
  - all the countries in ISO and name format (ie: US - United States).
