@@ -1,6 +1,6 @@
 {
   "name": "ember-countries",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Ember utils for countries lists and extra helpers.",
   "directories": {
     "doc": "doc",
@@ -19,7 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
-    "ember-cli": "1.13.11",
+    "ember-cli": "2.8.0",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-content-security-policy": "0.4.0",
     "ember-cli-dependency-checker": "^1.1.0",
