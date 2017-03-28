@@ -39,6 +39,7 @@ countryIsoToValue('FR'); // -> 'France'
 
 ## Running Tests
 
+* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
@@ -47,7 +48,7 @@ countryIsoToValue('FR'); // -> 'France'
 
 * `ember build`
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
 
 ##Contributing
 
