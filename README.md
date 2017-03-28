@@ -50,6 +50,6 @@ countryIsoToValue('FR'); // -> 'France'
 
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
 
-##Contributing
+## Contributing
 
 PRs welcome!
