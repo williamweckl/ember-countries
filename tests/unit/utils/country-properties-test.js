@@ -1,103 +1,136 @@
-import {countryIsoToValue, isCountryWithoutZip, isCountryWithState} from 'ember-countries';
+import {getCountry, isCountryWithoutZip, isCountryWithState} from 'ember-countries';
 import { module, test } from 'qunit';
 
 
-module('Unit | Utility | country properties | countryIsoToValue');
+module('Unit | Utility | country properties | getCountry');
 
 test('Test with `US`', function(assert) {
-  var result = countryIsoToValue('US');
-  assert.equal(result, 'United States');
+  let result = getCountry('US');
+  let expect = {iso2: 'US', iso3: 'UMI', isoNumeric: '581', name: 'United States'};
+  assert.deepEqual(result, expect);
+});
+
+test('Test with `UMI`', function(assert) {
+  let result = getCountry('UMI');
+  let expect = {iso2: 'US', iso3: 'UMI', isoNumeric: '581', name: 'United States'};
+  assert.deepEqual(result, expect);
+});
+
+test('Test with `581`', function(assert) {
+  let result = getCountry('581');
+  let expect = {iso2: 'US', iso3: 'UMI', isoNumeric: '581', name: 'United States'};
+  assert.deepEqual(result, expect);
 });
 
 test('Test with `FR`', function(assert) {
-  var result = countryIsoToValue('FR');
-  assert.equal(result, 'France');
+  let result = getCountry('FR');
+  let expect = {iso2: 'FR', iso3: 'FRA', isoNumeric: '250', name: 'France'};
+  assert.deepEqual(result, expect);
+});
+
+test('Test with `fr`', function(assert) {
+  let result = getCountry('fr');
+  let expect = {iso2: 'FR', iso3: 'FRA', isoNumeric: '250', name: 'France'};
+  assert.deepEqual(result, expect);
 });
 
 test('Test with incorrect iso', function(assert) {
-  var result = countryIsoToValue('AA');
-  assert.equal(result, 'AA');
+  let result = getCountry('AA');
+  assert.equal(result, undefined);
 });
 
 test('Test with `""` input', function(assert) {
-  var result = countryIsoToValue('');
-  assert.equal(result, '');
+  let result = getCountry('');
+  assert.equal(result, undefined);
 });
 
 test('Test with `null` input', function(assert) {
-  var result = countryIsoToValue(null);
-  assert.equal(result, '');
+  let result = getCountry(null);
+  assert.equal(result, undefined);
 });
 
 test('Test with `undefined` input', function(assert) {
-  var result = countryIsoToValue(undefined);
-  assert.equal(result, '');
+  let result = getCountry(undefined);
+  assert.equal(result, undefined);
 });
 
-test('Test throw error with `number` input', function(assert) {
-  assert.throws(() => {countryIsoToValue(3);}, TypeError);
+test('Test with wrong isoNumeric `number` input', function(assert) {
+  let result = getCountry(3);
+  assert.equal(result, undefined);
 });
 
 
 module('Unit | Utility | country properties | isCountryWithoutZip');
 
 test('Test with `US` input', function(assert) {
-  var result = isCountryWithoutZip('US');
+  let result = isCountryWithoutZip('US');
+  assert.equal(result, false);
+});
+
+test('Test with `UMI` input', function(assert) {
+  let result = isCountryWithoutZip('UMI');
+  assert.equal(result, false);
+});
+
+test('Test with `581` input', function(assert) {
+  let result = isCountryWithoutZip('581');
   assert.equal(result, false);
 });
 
 test('Test with `NU` input', function(assert) {
-  var result = isCountryWithoutZip('NU');
+  let result = isCountryWithoutZip('NU');
   assert.equal(result, true);
 });
 
 test('Test with `null` input', function(assert) {
-  var result = isCountryWithoutZip(null);
+  let result = isCountryWithoutZip(null);
   assert.equal(result, false);
 });
 
 test('Test with `""` input', function(assert) {
-  var result = isCountryWithoutZip('');
+  let result = isCountryWithoutZip('');
   assert.equal(result, false);
 });
 
 test('Test with `undefined` input', function(assert) {
-  var result = isCountryWithoutZip(undefined);
+  let result = isCountryWithoutZip(undefined);
   assert.equal(result, false);
 });
 
-test('Test throw error with `number` input', function(assert) {
-  assert.throws(() => {isCountryWithoutZip(3);}, TypeError);
+test('Test with `number` input', function(assert) {
+  let result = isCountryWithoutZip(3);
+  assert.equal(result, false);
 });
 
 
 module('Unit | Utility | country properties | isCountryWithState');
 
 test('Test with `US` input', function(assert) {
-  var result = isCountryWithState('US');
+  let result = isCountryWithState('US');
   assert.equal(result, true);
 });
 
 test('Test with `NU` input', function(assert) {
-  var result = isCountryWithState('FR');
+  let result = isCountryWithState('FR');
   assert.equal(result, false);
 });
 
 test('Test with `null` input', function(assert) {
-  var result = isCountryWithState(null);
+  let result = isCountryWithState(null);
   assert.equal(result, false);
 });
 
 test('Test with `""` input', function(assert) {
-  var result = isCountryWithState('');
+  let result = isCountryWithState('');
   assert.equal(result, false);
 });
 
 test('Test with `undefined` input', function(assert) {
-  var result = isCountryWithState(undefined);
+  let result = isCountryWithState(undefined);
   assert.equal(result, false);
 });
 
-test('Test throw error with `number` input', function(assert) {
-  assert.throws(() => {isCountryWithState(3);}, TypeError);
+test('Test with `number` input', function(assert) {
+  let result = isCountryWithState(3);
+  assert.equal(result, false);
 });

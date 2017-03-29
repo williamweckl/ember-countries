@@ -1,11 +1,11 @@
 export {
-  countries,
-  countriesWithoutZip,
-  countriesWithState
+  COUNTRIES_LIST,
+  COUNTRIES_WITHOUT_ZIP_LIST,
+  COUNTRIES_WITH_STATES_LIST
 } from "./utils/countries-lists";
 
 export {
-  countryIsoToValue,
+  getCountry,
   isCountryWithState,
   isCountryWithoutZip
 } from "./utils/country-properties";
