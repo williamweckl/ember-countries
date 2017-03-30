@@ -275,8 +275,8 @@ export const COUNTRIES_WITHOUT_ZIP_LIST = A([
 export const COUNTRIES_WITH_STATES_LIST = A(['US', 'CA']);
 
 
-export default [
+export default {
   COUNTRIES_LIST,
   COUNTRIES_WITHOUT_ZIP_LIST,
   COUNTRIES_WITH_STATES_LIST
-];
+};
