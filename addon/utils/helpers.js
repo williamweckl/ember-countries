@@ -1,4 +1,3 @@
-
 export function getFormat(val) {
   if (typeof val !== "string") {return null;}
 

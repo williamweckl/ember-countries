@@ -4,7 +4,6 @@ const {
   A
   } = Em;
 
-export const SUPPORTED_CODE = ["ISO2", "ISO3", "ISONUMERIC"];
 
 export const COUNTRIES_LIST = A([
   {name: 'Afghanistan'                                 , iso2: 'AF', iso3: 'AFG', isoNumeric: '4'  },
