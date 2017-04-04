@@ -1,4 +1,4 @@
-import {getCountry, isCountryWithoutZip, isCountryWithState} from 'ember-countries';
+import { getCountry, isCountryWithoutZip, isCountryWithState } from 'ember-countries';
 import { module, test } from 'qunit';
 
 
@@ -6,19 +6,19 @@ module('Unit | Utility | country properties | getCountry');
 
 test('Test with `US`', function(assert) {
   let result = getCountry('US');
-  let expect = {iso2: 'US', iso3: 'UMI', isoNumeric: '581', name: 'United States'};
+  let expect = {iso2: 'US', iso3: 'USA', isoNumeric: '840', name: 'United States'};
   assert.deepEqual(result, expect);
 });
 
-test('Test with `UMI`', function(assert) {
-  let result = getCountry('UMI');
-  let expect = {iso2: 'US', iso3: 'UMI', isoNumeric: '581', name: 'United States'};
+test('Test with `USA`', function(assert) {
+  let result = getCountry('USA');
+  let expect = {iso2: 'US', iso3: 'USA', isoNumeric: '840', name: 'United States'};
   assert.deepEqual(result, expect);
 });
 
-test('Test with `581`', function(assert) {
-  let result = getCountry('581');
-  let expect = {iso2: 'US', iso3: 'UMI', isoNumeric: '581', name: 'United States'};
+test('Test with `840`', function(assert) {
+  let result = getCountry('840');
+  let expect = {iso2: 'US', iso3: 'USA', isoNumeric: '840', name: 'United States'};
   assert.deepEqual(result, expect);
 });
 

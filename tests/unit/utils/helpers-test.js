@@ -1,4 +1,4 @@
-import { getFormat } from 'ember-countries/utils/helpers';
+import { getFormat, buildIndex } from 'ember-countries/utils/helpers';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | getFormat');
@@ -31,4 +31,25 @@ test('getFormat with wrong value `null`', function(assert) {
 test('getFormat with wrong value `undefined`', function(assert) {
   let result = getFormat(undefined);
   assert.equal(result, null);
+});
+
+
+module('Unit | Utility | buildIndex');
+
+test('buildIndex with basic list', function(assert) {
+  let result = buildIndex([{a: 1, b: 2}, {a: 3, b: 4}], 'a', undefined);
+  let expect = {"1": {"a": 1, "b": 2}, "3": {"a": 3,"b": 4}};
+  assert.deepEqual(result, expect);
+});
+
+test('buildIndex return index if already defined', function(assert) {
+  let result = buildIndex([{a: 1, b: 2}, {a: 3, b: 4}], 'a', {already: 'exist'});
+  let expect = {already: 'exist'};
+  assert.deepEqual(result, expect);
+});
+
+test('buildIndex return index if already defined', function(assert) {
+  let result = buildIndex([{a: 1, b: 2}, {a: 3, b: 4}], 'd', undefined);
+  let expect = {undefined: {a: 3, b: 4}};
+  assert.deepEqual(result, expect);
 });
