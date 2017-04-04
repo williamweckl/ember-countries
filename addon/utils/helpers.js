@@ -1,3 +1,10 @@
+import Em from 'ember';
+
+const {
+  isNone
+  } = Em;
+
+
 export function getFormat(val) {
   if (typeof val !== "string") {return null;}
 
@@ -10,4 +17,14 @@ export function getFormat(val) {
   } else {
     return null;
   }
+}
+
+
+export function buildIndex(LIST, code, indexedObj) {
+  if (!isNone(indexedObj)) { return indexedObj; }
+  indexedObj = LIST.reduce((prev, el) => {
+    prev[el[code]] = el;
+    return prev;
+  }, {});
+  return indexedObj;
 }
