@@ -37,8 +37,7 @@ import { COUNTRIES_LIST, COUNTRIES_WITHOUT_ZIP_LIST, COUNTRIES_WITH_STATES_LIST 
 import { US_STATES_LIST, US_MILITARY_STATES_LIST, US_REQUIRING_CUSTOM_DECLARATION_STATES_LIST, CA_STATES_LIST, STATES_BY_COUNTRIES } from 'ember-countries';
 import { getCountry, isCountryWithState, isCountryWithoutZip } from 'ember-countries';
 import { getStatesForCountry, isCustomsDeclarationRequiredInUS, countryContainsState, getState } from 'ember-countries';
-import defaultEmberCountries from 'ember-countries;
-});
+import defaultEmberCountries from 'ember-countries';
 ```
 
 ### Example 1: countries lists
