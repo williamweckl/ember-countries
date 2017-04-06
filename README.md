@@ -27,7 +27,7 @@ You can find more information about ISO codes here:
 
 ## Upgrading from 1.x.x to 2.0.0
 
-Here are all the information that you need to migrate from version 1.x.x to 2.0.0: [Migrating from 1.x.x to 2.0.0] (https://github.com/mnowik/ember-countries/wiki/Migrating-from-1.x.x-to-2.0.0)
+Here are all the information that you need to migrate from version 1.x.x to 2.0.0: [Migrating from 1.x.x to 2.0.0](https://github.com/mnowik/ember-countries/wiki/Migrating-from-1.x.x-to-2.0.0)
 
 ## Usage
 
