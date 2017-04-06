@@ -68,12 +68,12 @@ test('Test with `US` input', function(assert) {
 });
 
 test('Test with `UMI` input', function(assert) {
-  let result = isCountryWithoutZip('UMI');
+  let result = isCountryWithoutZip('USA');
   assert.equal(result, false);
 });
 
 test('Test with `581` input', function(assert) {
-  let result = isCountryWithoutZip('581');
+  let result = isCountryWithoutZip('840');
   assert.equal(result, false);
 });
 
