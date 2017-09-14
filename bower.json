@@ -1,6 +1,0 @@
-{
-  "name": "ember-countries",
-  "dependencies": {
-    "ember": "~2.8.0"
-  }
-}
